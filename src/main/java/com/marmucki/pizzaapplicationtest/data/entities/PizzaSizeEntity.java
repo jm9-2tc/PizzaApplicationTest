@@ -23,4 +23,24 @@ public class PizzaSizeEntity {
     @ManyToOne
     @JoinColumn(name = "pizza_id", insertable = false, updatable = false)
     private PizzaEntity pizza;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Integer getPizzaId() {
+        return pizzaId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Set<PizzaEntity> getPizzas() {
+        return pizzas;
+    }
+
+    public PizzaEntity getPizza() {
+        return pizza;
+    }
 }
