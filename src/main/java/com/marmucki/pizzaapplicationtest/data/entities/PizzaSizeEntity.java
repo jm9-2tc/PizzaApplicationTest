@@ -1,6 +1,7 @@
 package com.marmucki.pizzaapplicationtest.data.entities;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
@@ -17,30 +18,13 @@ public class PizzaSizeEntity {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "pizza")
-    private Set<PizzaEntity> pizzas;
+    @Column(name = "price_base")
+    private BigDecimal priceBase;
+
+    @OneToMany(mappedBy = "orders_sizes")
+    private Set<OrderSizeEntity> ordersSizes;
 
     @ManyToOne
     @JoinColumn(name = "pizza_id", insertable = false, updatable = false)
     private PizzaEntity pizza;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public Integer getPizzaId() {
-        return pizzaId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Set<PizzaEntity> getPizzas() {
-        return pizzas;
-    }
-
-    public PizzaEntity getPizza() {
-        return pizza;
-    }
 }

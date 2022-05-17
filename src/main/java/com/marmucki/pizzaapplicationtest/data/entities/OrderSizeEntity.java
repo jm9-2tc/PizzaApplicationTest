@@ -26,28 +26,4 @@ public class OrderSizeEntity {
     @ManyToOne
     @JoinColumn(name = "size_id", insertable = false, updatable = false)
     private PizzaSizeEntity size;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public Integer getOrderId() {
-        return orderId;
-    }
-
-    public Integer getSizeId() {
-        return sizeId;
-    }
-
-    public Integer getSizeCount() {
-        return sizeCount;
-    }
-
-    public OrderEntity getOrder() {
-        return order;
-    }
-
-    public PizzaSizeEntity getSize() {
-        return size;
-    }
 }

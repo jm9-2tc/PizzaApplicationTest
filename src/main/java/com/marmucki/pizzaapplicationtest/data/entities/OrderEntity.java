@@ -44,48 +44,4 @@ public class OrderEntity {
 
     @OneToMany(mappedBy = "order_size")
     private Set<OrderSizeEntity> orderSizes;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getClientName() {
-        return clientName;
-    }
-
-    public String getClientAddress() {
-        return clientAddress;
-    }
-
-    public String getClientPhone() {
-        return clientPhone;
-    }
-
-    public Integer getClient_floor() {
-        return client_floor;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public Date getExpectedAt() {
-        return expectedAt;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public Set<OrderSizeEntity> getOrderSizes() {
-        return orderSizes;
-    }
 }

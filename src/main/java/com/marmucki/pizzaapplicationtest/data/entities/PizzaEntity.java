@@ -16,16 +16,4 @@ public class PizzaEntity {
 
     @OneToMany(mappedBy = "pizza_size", orphanRemoval = true)
     private Set<PizzaSizeEntity> sizes;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Set<PizzaSizeEntity> getSizes() {
-        return sizes;
-    }
 }
